@@ -142,11 +142,11 @@ router.post(
       }
 
       const newEnrollment: Enrollment = {
-        studentId: req.params.studentId,
+        studentId: req.params.studentId!,
         courseId: body.courseId,
       };
       enrollments.push(newEnrollment);
-    
+
       return res.status(201).json({
         success: true,
         message: `Student ${req.params.studentId} && ${req.body.courseId} has been added successfully`,
