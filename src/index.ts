@@ -30,6 +30,7 @@ app.get("/", (req: Request, res: Response) => {
   res.send("Lecture18 API services");
 });
 
+//GET http://localhost:3000/me
 app.get("/me", (req: Request, res: Response) => {
   res.status(200).json({
     success: true,
